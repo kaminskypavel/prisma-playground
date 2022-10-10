@@ -12,12 +12,15 @@ async function main() {
         },
     })
 
+    console.log(`inserted user with id: ${user.id}`);
+
     const users = await prisma.user.findMany()
     console.log(users);
 }
 
 main()
     .then(async () => {
+        // await prisma.user.deleteMany();
         await prisma.$disconnect()
     })
     .catch(async (e) => {

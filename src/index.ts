@@ -9,6 +9,10 @@ async function main() {
         data: {
             name: faker.name.fullName(),
             email: faker.internet.email(),
+            meta: {
+                data1: faker.random.word(),
+                data2: faker.random.word()
+            },
         },
     })
 
